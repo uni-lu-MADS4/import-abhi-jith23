@@ -29,7 +29,7 @@ We will take advantage of the RStudio projects and store data files in a sub-fol
 
 ```{r}
 # Your answer in code
-# Hello
+library(readr)
 ```
 
 
@@ -77,8 +77,14 @@ For example, you folder structure could be (depending on the picked names) as he
 
 
 ```{r}
-# Your answer in code
+getwd()
+```
 
+
+
+```{r}
+# Your answer in code
+blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",")
 ```
 
 
@@ -92,7 +98,7 @@ If we are happy with the guessed delimiter and the column names / types, we coul
 
 ```{r}
 # Your answer in code
-
+blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim=",", show_col_types=FALSE)
 
 ```
 
