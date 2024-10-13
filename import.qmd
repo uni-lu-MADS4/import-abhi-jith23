@@ -1,7 +1,7 @@
 ---
 title: "Import practical"
-author: Your name here
-date: today
+author: Abhijith Senthilkumar
+date: 08.10.2024
 format: html
 ---
 
@@ -77,12 +77,6 @@ For example, you folder structure could be (depending on the picked names) as he
 
 
 ```{r}
-getwd()
-```
-
-
-
-```{r}
 # Your answer in code
 blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",")
 ```
@@ -99,7 +93,7 @@ If we are happy with the guessed delimiter and the column names / types, we coul
 ```{r}
 # Your answer in code
 blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim=",", show_col_types=FALSE)
-
+print(blood_fat)
 ```
 
 
@@ -110,17 +104,11 @@ blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-
 
 - Tibbles show some useful information such as the number of rows and columns:
 
-
-
-> Your answer as text
-
-
+> 26x5 
 
 - The columns of a tibble report their type:
 
-
-
-> Your answer as text
+> id-double, group-char, weight-double, age-double, fat-double
 
 
 
@@ -137,9 +125,12 @@ In the `col_types = cols(....)` you can use the columns bare names and either th
 
 ```{r}
 # Your answer in code
-
-
-
+# Specify that 'age' and 'id' should be integers
+readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",",
+                  col_types=cols(
+                    age="i",
+                    id="i"
+                  ))
 ```
 
 
@@ -147,10 +138,12 @@ In the `col_types = cols(....)` you can use the columns bare names and either th
 
 ```{r}
 # Your answer in code
-
-
-
-
+readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",",
+                  col_types=cols(
+                    age="i",
+                    id="i",
+                    weight="_"
+                  ))
 ```
 
 
