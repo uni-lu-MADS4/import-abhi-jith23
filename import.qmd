@@ -78,7 +78,7 @@ For example, you folder structure could be (depending on the picked names) as he
 
 ```{r}
 # Your answer in code
-blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",")
+blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat_.csv", delim = ",")
 ```
 
 
@@ -92,7 +92,7 @@ If we are happy with the guessed delimiter and the column names / types, we coul
 
 ```{r}
 # Your answer in code
-blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim=",", show_col_types=FALSE)
+blood_fat <- read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat_.csv", delim=",", show_col_types=FALSE)
 print(blood_fat)
 ```
 
@@ -126,7 +126,7 @@ In the `col_types = cols(....)` you can use the columns bare names and either th
 ```{r}
 # Your answer in code
 # Specify that 'age' and 'id' should be integers
-readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",",
+readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat_.csv", delim = ",",
                   col_types=cols(
                     age="i",
                     id="i"
@@ -138,7 +138,7 @@ readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23
 
 ```{r}
 # Your answer in code
-readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat.csv", delim = ",",
+readr::read_delim("D:/MyFiles/R/Programming with R and Python/import-abhi-jith23/data/blood_fat_.csv", delim = ",",
                   col_types=cols(
                     age="i",
                     id="i",
